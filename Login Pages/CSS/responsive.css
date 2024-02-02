@@ -1,0 +1,73 @@
+@media only screen and (max-width: 992px) {
+
+    .img {
+        width: 40%;
+    }
+
+    .info {
+        width: 50%;
+    }
+
+    .title {
+        padding-bottom: 32px;
+    }
+
+    #my-signin2 {
+        padding-top: 17px;
+    }
+
+    .account {
+        padding-top: 13px;
+    }
+
+    .alert-validate::before {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .img {
+        width: 50%;
+    }
+
+    .content {
+        gap: 70px;
+        padding: 33px 35px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding: 22px 80px 33px;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .info {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .hero {
+        padding: 22px 15px 33px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .logo img {
+        height: 4rem;
+        ;
+    }
+
+    .hero {
+        padding: 22px 0px 33px;
+    }
+
+    .content {
+        padding: 20px 22px;
+    }
+}

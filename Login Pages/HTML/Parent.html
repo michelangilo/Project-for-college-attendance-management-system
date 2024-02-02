@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Login</title>
+  <link rel="icon" type="image/png" href="https://colorlib.com/etc/lf/Login_v1/images/icons/favicon.ico" />
+  <script src="https://kit.fontawesome.com/11b8b2888a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/responsive.css">
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+</head>
+
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="logo">
+        <img src="../attendifylogo.jpg" alt="Attendify">
+      </div>
+      <div class="content">
+        <div class="img">
+          <img src="https://colorlib.com/etc/lf/Login_v1/images/img-01.png" alt="IMG">
+        </div>
+        <form class="info">
+          <span class="title">Parent Login</span>
+          <div class="field">
+            <input class="input" type="email" name="email" placeholder="Email">
+            <span class="focus"></span>
+            <span class="box">
+              <i class="fa-solid fa-envelope" style="color: #666666;"></i>
+            </span>
+          </div>
+          <div class="field">
+            <input class="input" type="text" name="password" placeholder="Password">
+            <span class="focus"></span>
+            <span class="box">
+              <i class="fa-solid fa-lock" style="color: #666666;"></i>
+            </span>
+          </div>
+          <div class="butt">
+            <button class="btn">Login</button>
+          </div>
+          <div class="text">
+            <a class="text2" href="#">
+              Forgot Password?
+            </a>
+          </div>
+          <div id="my-signin2"></div>
+          <script>
+            function onSuccess(googleUser) {
+              console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+            }
+            function onFailure(error) {
+              console.log(error);
+            }
+            function renderButton() {
+              gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'dark',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+              });
+            }
+          </script>
+
+          <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+          <div class="text account">
+            <a class="text2" href="#">
+              Create your Account
+              <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
